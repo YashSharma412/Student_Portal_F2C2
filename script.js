@@ -28,7 +28,7 @@ function populateTable(studentArray){
                     </td>
                     <td>${student.gender}</td>
                     <td>${student.class}</td>
-                    <td>${student.marks}99</td>
+                    <td>${student.marks}</td>
                     <td>${(student.passing === true)?"Passed":"Failed"}</td>
                     <td>${student.email}</td>
                     <td>${student.city}</td>
@@ -39,10 +39,10 @@ function populateTable(studentArray){
 
 document.getElementById("sort-az").addEventListener('click', () => sortByName("ascending"));
 document.getElementById("sort-za").addEventListener('click', () => sortByName('descending'));
-document.getElementById("sortMarks").addEventListener('click', () => sortByMarks);
-document.getElementById("sortPassing").addEventListener('click', () => sortByPassing);
-document.getElementById("sortClass").addEventListener('click', () => sortByClass);
-document.getElementById("sortGender").addEventListener('click', () => sortByGender);
+document.getElementById("sortMarks").addEventListener('click', () => sortByMarks());
+document.getElementById("sortPassing").addEventListener('click', () => sortByPassing());
+document.getElementById("sortClass").addEventListener('click', () => sortByClass());
+document.getElementById("sortGender").addEventListener('click', () => sortByGender());
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -73,7 +73,7 @@ function sortByName(order){
 
 // 4.) 
 function sortByMarks(){
-    dataArray.sort((a, b) => a.marks - b.marks);
+    dataArray.sort((a, b) => a.marks-b.marks);
     populateTable(dataArray);
 }
 

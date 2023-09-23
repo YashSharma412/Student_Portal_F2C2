@@ -9,7 +9,7 @@
   /* font variables */
   --PageHeaderFont: 30px;
   --hederFont: 24px;
-  --listFont: 20px;
+  --listFont: 17px;
 }
 * {
   font-family: "Inter", sans-serif;
@@ -44,8 +44,7 @@ header > div:hover {
 }
 
 main {
-  /* width: 100%;
-    height: 100%; */
+  height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -84,6 +83,11 @@ main {
   font-size: var(--hederFont);
   height: 45px;
   width: 200px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#searchBtn:hover ,.sortBtns:hover{
+  background-color: #313131;
+  transform: scaleY(1.1);
 }
 .sortBtns {
   padding-inline: 32px;
@@ -121,8 +125,8 @@ thead {
   font-size: var(--hederFont);
   font-weight: 500;
 }
-thead td{
-  padding: 15px 25px;
+thead td {
+  padding: 15px 20px;
 }
 td {
   font-size: var(--listFont);
