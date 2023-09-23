@@ -122,17 +122,20 @@ thead {
   color: var(--darkBgandText);
   position: sticky;
   top: 0px;
-  font-size: var(--hederFont);
-  font-weight: 500;
 }
 thead td {
-  padding: 15px 20px;
+  font-weight: 500;
+  font-size: var(--hederFont);
+  padding: 15px 15px;
 }
 td {
   font-size: var(--listFont);
   padding: 7px 25px;
 }
-
+tbody>tr:hover{
+  transform: scaleY(1.1);
+  background-color: #cdcdcd;
+}
 .nameTd > span {
   margin-bottom: 10px;
 }
@@ -140,6 +143,13 @@ td {
   width: 38px;
   height: 38px;
   margin-right: 15px;
+  border-radius: 50%;
+  border: 2px solid blue;
+  transition: all 0.3s ease-out;
+}
+
+.nameTd > img:hover{
+  transform: scale(1.1);
 }
 
 .tBody td {
